@@ -1,0 +1,16 @@
+{
+  "name": "@playable-rag/ingestion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/ingest.ts",
+  "types": "src/ingest.ts",
+  "dependencies": {
+    "@playable-rag/db": "*",
+    "@playable-rag/shared-types": "*",
+    "langchain": "^0.3.0",
+    "gray-matter": "^4.0.3",
+    "openai": "^4.68.0",
+    "zod": "^3.23.0"
+  }
+}

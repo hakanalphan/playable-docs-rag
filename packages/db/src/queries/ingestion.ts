@@ -2,7 +2,7 @@ import { eq, sql } from "drizzle-orm"; // powers the admin "Ingestion" history t
 import { db } from "../client";
 import { ingestionRuns } from "../schema";
 
-// Called once at the start of `pnpm ingest` — row is visible in the dashboard immediately
+// Called once at the start of `npm run ingest` — row is visible in the dashboard immediately
 export async function startIngestionRun(triggeredBy: "cli" | "admin") {
   const [row] = await db.insert(ingestionRuns).values({ triggeredBy }).returning();
   return row;

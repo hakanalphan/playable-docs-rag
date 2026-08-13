@@ -1,13 +1,17 @@
 {
   "name": "playable-rag",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
-    "db:push": "pnpm --filter @playable-rag/db db:push",
+    "db:push": "npm run db:push --workspace=@playable-rag/db",
     "seed": "tsx scripts/seed.ts",
     "ingest": "tsx scripts/ingest.ts",
     "eval": "tsx scripts/eval.ts"
@@ -17,6 +21,6 @@
     "typescript": "^5.6.0",
     "tsx": "^4.19.0"
   },
-  "packageManager": "pnpm@9.12.0",
-  "engines": { "node": ">=20" }
+  "packageManager": "npm@10.9.3",
+  "engines": { "node": ">=20", "npm": ">=10" }
 }

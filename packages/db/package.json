@@ -10,8 +10,8 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@playable-rag/shared-types": "workspace:*",
-    "@playable-rag/core": "workspace:*",
+    "@playable-rag/shared-types": "*",
+    "@playable-rag/core": "*",
     "drizzle-orm": "^0.33.0",
     "postgres": "^3.4.4",
     "zod": "^3.23.0"
